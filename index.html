@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bread</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Chewy|Modak|Press+Start+2P|Sigmar+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <ul class="navbar">
+        <li class="nav-item"><img class="nav-logo" src="https://static.thenounproject.com/png/13443-200.png"> <p>Text</p></li>
+        <li class="nav-item nav-post-btn"><i class="far fa-plus-square"></i></li>
+        <li class="nav-item nav-user" style="float:right"><a class="active" href="#about"><i class="fas fa-user"></i> User</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <form id="new-post" class="hidden">
+        <div>
+            <input type="text" id="url" placeholder= "Enter URL">
+        </div>
+        <div>
+            <textarea id="text" placeholder= "Enter Caption"></textarea>
+        </div>
+        <div>
+            <button id="new-post-submit">Submit</button>
+        </div>
+      </form>
+      <div id="feed">
+        <!-- 
+          <div class="tile">
+            <div class="left-div">
+              <img>
+              <div class="info-div">
+                <p class="user"></p>
+                <p class="likes"></p>
+              </div>
+            </div>
+            <div class="right-div">
+              <div class="comment-div">
+                <p class="cap"></p>
+                <ul class="comment-list">
+                  <li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+              
+         -->
+      </div>
+    </main>
+
+    <script src="./src/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    font-family: 'Schoolbell', cursive;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0;
+    height: 50px;
+    overflow: hidden;
+    background-color: #e8d9c5;
+    text-align: center;
+    box-shadow: 0 -2px 3px 3px #000;
+}
+
+.navbar span {
+    margin-bottom: 15px;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;    
+}
+  
+.nav-item {
+    float: left;
+    cursor: pointer;
+}
+
+.nav-item p {
+    font-family: 'Bungee Inline', cursive;
+    display: inline-block;
+    height: 80px;
+    vertical-align: middle;
+    font-size: 200%;
+}
+  
+.nav-item a {
+    display: block;
+    font-size: 125%;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 10px;
+    height: 20px;
+    transition: border-bottom 0.3s;
+
+}
+.nav-item i {
+    font-size: 125%;
+}
+  
+.nav-item a:hover {
+    border-bottom: 5px solid #BBEEBB;
+}
+
+.nav-post-btn {
+    font-size: 120%;
+    display: block;
+    color: #111;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 20px;
+    height: 20px;
+    transition: transform 0.3s;
+}
+
+.nav-post-btn:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+/* CONTENT */
+#feed {
+    padding: 50px 0;
+    background: url('https://image.freepik.com/free-vector/sandwich-seamless-pattern-background-vector-design_22159-100.jpg');
+    background-attachment: fixed;
+}
+
+#new-post {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-color: antiquewhite;
+}
+
+form div input {
+    outline: none;
+    font-size: 110%;
+    width: 50%;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+form div textarea {
+    width: 50%;
+    margin: 5px 0;
+}
+
+form div button {
+    font-size: 125%;
+    width: 25%;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 3px;
+    transition: transform 0.3s;
+}
+
+form div button:hover {
+    transform: scale(0.9);
+}
+
+.hidden {
+    display: none;
+}
+
+.tile {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    background-color: #BBEEBB;
+    margin: 20px auto;
+    box-shadow: 0 0 2px 1px #333;
+    border-radius: 3px;
+}
+
+.left-div {
+    margin: 15px 0 15px 15px;
+    width: 350px;
+    overflow: hidden;
+}
+
+.tile-img {
+    min-width: 350px;
+    height: 350px;
+    margin-bottom: -6px;
+}
+
+.info-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-image: 
+        linear-gradient(
+        to left, 
+        #000, 
+        #bbeebb
+        ) 1;
+}
+
+.user {
+    font-size: 110%;
+    font-weight: 700;
+}
+
+.likes {
+    font-size: 110%;
+}
+
+.right-div {
+    width: 420px;
+    margin: 15px;
+}
+
+.comment-div {
+    background-color: aliceblue;
+    height: 275px;
+    background-color: #fff;
+    overflow: auto;
+    box-shadow: inset 0 0 2px #000;
+}
+
+.comment-list {
+    list-style-type: none;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.comment-list li {
+    font-size: 90%;
+    padding-top: 15px;
+}
+
+textarea {
+    width: 400px;
+    height: 55px;
+    padding: 10px;
+    border:none;
+    outline: none;
+    /* color: sandybrown */
+}
+
+.comment-btn {
+    cursor: pointer;
+    background-color: transparent;
+    display: block;
+    float: right;
+    height: 35px;
+    border: none;
+    font-size: 110%;
+    transition: transform 0.5s;
+}
+
+.comment-btn:hover {
+    transform: rotate(-12deg);
+}
