@@ -59,7 +59,7 @@ function signIn() {
 }
 
 function fetchUser(username){
-    fetch('http://localhost:3000/users')
+    fetch('https://peaceful-taiga-45438.herokuapp.com/users')
     .then(res => res.json())
     .then(data => {
         ALL_USERS = data;
@@ -70,7 +70,7 @@ function fetchUser(username){
         }
         })
         if(typeof CURRENT_USER == "string"){
-            fetch('http://localhost:3000/users', {
+            fetch('https://peaceful-taiga-45438.herokuapp.com/users', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "Application/JSON"
@@ -88,7 +88,7 @@ function fetchUser(username){
 }
 
 function fetchAllPosts(){
-    fetch('http://localhost:3000/posts')
+    fetch('https://peaceful-taiga-45438.herokuapp.com/posts')
     .then(res => res.json())
     .then(data => {
         let sorted = data.sort(function(a, b) {return a.id - b.id})
@@ -304,7 +304,7 @@ function renderImage(post){
 
 function submitComment(comment, post){
     if(comment){
-    fetch('http://localhost:3000/comments', {
+    fetch('https://peaceful-taiga-45438.herokuapp.com/comments', {
         method: 'POST',
         headers: {
             "Content-Type": "Application/JSON"
@@ -334,7 +334,7 @@ function submitComment(comment, post){
 }
 
 function handleChange(post, likes){
-    fetch(`http://localhost:3000/posts/${post.id}`,{
+    fetch(`https://peaceful-taiga-45438.herokuapp.com/posts/${post.id}`,{
         method: 'PATCH',
         headers: {
             "Content-Type": "Application/JSON",
@@ -348,7 +348,7 @@ function handleChange(post, likes){
 }
 
 function submitPost(form, user){
-    fetch('http://localhost:3000/posts', {
+    fetch('https://peaceful-taiga-45438.herokuapp.com/posts', {
         method: 'POST',
         headers: {
             "Content-Type": "Application/JSON"
@@ -378,7 +378,7 @@ function submitPost(form, user){
 
 function filterPosts(username){
     feed.innerHTML = '';
-    fetch('http://localhost:3000/posts')
+    fetch('https://peaceful-taiga-45438.herokuapp.com/posts')
     .then(res => res.json())
     .then(data => {
         let sorted = data.sort(function(a, b) {return a.id - b.id})
@@ -426,7 +426,7 @@ function reportPost(post){
 
     confirmBtn.addEventListener('click', function(){
         modalDiv.style.display = 'none';  
-        fetch(`http://localhost:3000/posts/${post.id}`,{
+        fetch(`https://peaceful-taiga-45438.herokuapp.com/posts/${post.id}`,{
             method: 'PATCH',
             headers: {
                 "Content-Type": "Application/JSON",
@@ -472,7 +472,7 @@ function userLoaf(post, str){
               CURRENT_USER.disliked_posts.splice(i, 1); 
             }
          }
-        fetch(`http://localhost:3000/users/${CURRENT_USER.id}`,{
+        fetch(`https://peaceful-taiga-45438.herokuapp.com/users/${CURRENT_USER.id}`,{
             method: 'PATCH',
             headers: {
                 "Content-Type": "Application/JSON",
@@ -491,7 +491,7 @@ function userLoaf(post, str){
               CURRENT_USER.liked_posts.splice(i, 1); 
             }
          }
-        fetch(`http://localhost:3000/users/${CURRENT_USER.id}`,{
+        fetch(`https://peaceful-taiga-45438.herokuapp.com/users/${CURRENT_USER.id}`,{
             method: 'PATCH',
             headers: {
                 "Content-Type": "Application/JSON",
@@ -514,7 +514,7 @@ function userTrash(post, str){
               CURRENT_USER.liked_posts.splice(i, 1); 
             }
          }
-        fetch(`http://localhost:3000/users/${CURRENT_USER.id}`,{
+        fetch(`https://peaceful-taiga-45438.herokuapp.com/users/${CURRENT_USER.id}`,{
             method: 'PATCH',
             headers: {
                 "Content-Type": "Application/JSON",
@@ -533,7 +533,7 @@ function userTrash(post, str){
               CURRENT_USER.disliked_posts.splice(i, 1); 
             }
          }
-        fetch(`http://localhost:3000/users/${CURRENT_USER.id}`,{
+        fetch(`https://peaceful-taiga-45438.herokuapp.com/users/${CURRENT_USER.id}`,{
             method: 'PATCH',
             headers: {
                 "Content-Type": "Application/JSON",
