@@ -139,8 +139,6 @@ function renderImage(post){
     likes.setAttribute('class', 'likes');
     i.setAttribute('class','fas fa-bread-slice');
     down.setAttribute('class','far fa-trash-alt');
-    debugger;
-    if(CURRENT_USER.liked_posts !== undefined) { 
     if(CURRENT_USER.liked_posts.includes(post.id)){
         i.setAttribute('style','color:sandybrown;');
         down.setAttribute('style','color:black;');
@@ -256,7 +254,7 @@ function renderImage(post){
             }
         })
     }
-}
+
     //right side with caption and comments
     let rightDiv = document.createElement('div');
     rightDiv.setAttribute('class', 'right-div');
